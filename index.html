@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Interface</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="search-container">
+    <div class="dropdown">
+      <button class="dropdown-btn" id="dropdownButton">Everything</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="updateSearch('Everything')">Everything</a>
+        <a href="#" onclick="updateSearch('Software Development')">Software Development</a>
+        <a href="#" onclick="updateSearch('Web Development')">Web Development</a>
+        <a href="#" onclick="updateSearch('Data Analyst')">Data Analyst</a>
+        <a href="#" onclick="updateSearch('IT Consultant')">IT Consultant</a>
+        <a href="#" onclick="updateSearch('Network Administrator')">Network Administrator</a>
+      </div>
+    </div>
+    <input type="text" class="search-input" placeholder="Search Anything" id="searchInput">
+    <button class="search-btn">&#128269;</button>
+  </div>
+
+  <script>
+    function updateSearch(category) {
+      
+      document.getElementById('dropdownButton').innerText = category;
+      
+    
+      document.getElementById('searchInput').placeholder = `Search for ${category}`;
+    }
+  </script>
+</body>
+</html>
